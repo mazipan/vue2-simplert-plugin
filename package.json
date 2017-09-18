@@ -1,0 +1,90 @@
+{
+  "name": "vue2-simplert-plugin",
+  "description": "Vue2-Simplert as Vue.js Plugins",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Irfan Maulana (https://github.com/mazipan/)",
+  "private": false,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --color --open",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "pack": "cross-env NODE_ENV=production webpack --progress --hide-modules --config webpack.config.dist.js",
+    "lint": "./node_modules/.bin/eslint --ext .js,.vue src test/*.js",
+    "test": "./node_modules/.bin/jest --coverage",
+    "dist": "npm run lint && npm run build && npm run pack"
+  },
+  "main": "dist/vue2-simplert-plugin.js",
+  "files": [
+    "dist/vue2-simplert-plugin.js",
+    "dist/vue2-simplert-plugin.js.map"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mazipan/vue2-simplert-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mazipan/vue2-simplert-plugin/issues"
+  },
+  "keywords": [
+    "vue select image",
+    "vue image select",
+    "vue image picker",
+    "vue2 image picker",
+    "vue2 image select"
+  ],
+  "dependencies": {
+    "vue": "^2.4.2"
+  },
+  "devDependencies": {
+    "avoriaz": "^4.1.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.6.1",
+    "eslint-plugin-vue": "3.13.0",
+    "file-loader": "^0.11.2",
+    "jest": "^21.0.2",
+    "jest-vue-preprocessor": "^1.1.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "vue-loader": "^13.0.4",
+    "vue-template-compiler": "^2.4.2",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:vue/recommended"
+    ]
+  },
+  "eslintIgnore": [
+    "dist/*.js",
+    "build/*.js",
+    "config/*.js",
+    "dist",
+    "node_modules"
+  ],
+  "jest": {
+    "coverageDirectory": "test/coverage",
+    "moduleNameMapper": {
+      "^vue$": "vue/dist/vue.common.js",
+      "src/([^\\.]*)$": "<rootDir>/src/$1.vue"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor"
+    }
+  }
+}

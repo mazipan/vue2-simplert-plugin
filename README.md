@@ -1,6 +1,15 @@
 # vue2-simplert-plugin
 :warning:  Vue2-Simplert as Vue.js Plugins
 
+[![License](https://img.shields.io/github/license/mazipan/vue2-simplert-plugin.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert-plugin) 
+[![Github Issue](https://img.shields.io/github/issues/mazipan/vue2-simplert-plugin.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert-plugin/issues) 
+[![GitHub Fork](https://img.shields.io/github/forks/mazipan/vue2-simplert-plugin.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert-plugin/network/members) 
+[![GitHub Star](https://img.shields.io/github/stars/mazipan/vue2-simplert-plugin.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert-plugin/stargazers) 
+
+[![version](https://img.shields.io/npm/v/vue2-simplert-plugin.svg)](https://www.npmjs.com/package/vue2-simplert-plugin)
+[![downloads monthly](https://img.shields.io/npm/dm/vue2-simplert-plugin.svg)](https://www.npmjs.com/package/vue2-simplert-plugin) 
+[![downloads](https://img.shields.io/npm/dt/vue2-simplert-plugin.svg)](https://www.npmjs.com/package/vue2-simplert-plugin) 
+
 ## Why we need ?
 When we using [vue2-simplert](https://github.com/mazipan/vue2-simplert), we will need to `import` the library in every place we need. This is very bored because we do same task in many place. In [vue2-simplert](https://github.com/mazipan/vue2-simplert) we need to access method inside using `$refs` which is not recommended. For solving those problems I reborn [vue2-simplert](https://github.com/mazipan/vue2-simplert) as Vue.js Plugins and using EventBus for open/close.
 

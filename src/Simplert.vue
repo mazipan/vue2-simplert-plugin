@@ -69,6 +69,7 @@ export default {
 
   data: function () {
     return {
+      eventBus: null,
       DEFAULT_TYPE: 'info',
       DEFAULT_BTN_CLOSE_TEXT: 'Close',
       DEFAULT_BTN_CONFIRM_TEXT: 'Confirm',
@@ -140,15 +141,24 @@ export default {
     }
   },
 
+  watch: {
+    'eventBus.show': function (val) {
+      if (val === true) {
+        this.openSimplert(this.eventBus)
+      } else this.justCloseSimplert()
+    }
+  },
+
   methods: {
     justCloseSimplert: function () {
+      this.eventBus.show = false
       this.showSimplert = false
     },
 
     closeOverlay: function (e) {
       var _self = this
       if (e.target.className.indexOf('simplert--shown') > 0 && !_self.disableOverlayClick) {
-        _self.showSimplert = false
+        this.justCloseSimplert()
       }
     },
 
@@ -156,7 +166,7 @@ export default {
       var _self = this
       e.preventDefault()
 
-      _self.showSimplert = false
+      this.justCloseSimplert()
 
       if (_self.onConfirm !== null) {
         _self.onConfirm()
@@ -167,7 +177,7 @@ export default {
       var _self = this
       e.preventDefault()
 
-      _self.showSimplert = false
+      this.justCloseSimplert()
 
       if (_self.onClose !== null) {
         _self.onClose()
@@ -176,7 +186,6 @@ export default {
 
     openSimplert: function (obj) {
       var _self = this
-
       if (typeof obj !== 'undefined') {
         _self.showSimplert = true
         _self.title = obj.title
@@ -279,6 +288,9 @@ export default {
         }
       }
     }
+  },
+  created () {
+    this.eventBus = window.SimplertEventBus.CONFIG.options
   }
 }
 </script>

@@ -3,12 +3,12 @@ var webpack = require('webpack')
 var npm = require('./package.json')
 
 module.exports = {
-  entry: './src/main-dist.js',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist',
     filename: 'vue2-simplert-plugin.js',
-    library: 'VueSelectImage',
+    library: 'Simplert',
     libraryTarget: 'umd',
     umdNamedDefine: true,
     jsonpFunction: 'WebpackJsonp'

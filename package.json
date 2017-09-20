@@ -1,7 +1,7 @@
 {
   "name": "vue2-simplert-plugin",
   "description": "Vue2-Simplert as Vue.js Plugins",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "author": "Irfan Maulana (https://github.com/mazipan/)",
   "private": false,
@@ -13,6 +13,7 @@
     "test": "./node_modules/.bin/jest --coverage",
     "dist": "npm run lint && npm run build && npm run pack"
   },
+  "homepage": "https://github.com/mazipan/vue2-simplert-plugin/",
   "main": "dist/vue2-simplert-plugin.js",
   "files": [
     "dist/vue2-simplert-plugin.js",
@@ -26,30 +27,30 @@
     "url": "https://github.com/mazipan/vue2-simplert-plugin/issues"
   },
   "keywords": [
-    "vue select image",
-    "vue image select",
-    "vue image picker",
-    "vue2 image picker",
-    "vue2 image select"
+    "vue2 alert",
+    "vue2 sweet alert",
+    "vue2 popup",
+    "vue alert",
+    "vue sweet alert",
+    "vue popup"
   ],
-  "dependencies": {
-    "vue": "^2.4.2"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "avoriaz": "^4.1.0",
+    "avoriaz": "^4.2.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
-    "eslint": "^4.7.1",
-    "eslint-plugin-vue": "2.1.0",
+    "eslint": "^4.6.1",
+    "eslint-plugin-vue": "3.13.0",
     "file-loader": "^0.11.2",
     "jest": "^21.1.0",
     "jest-vue-preprocessor": "^1.1.0",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
+    "vue": "^2.4.4",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",

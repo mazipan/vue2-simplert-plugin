@@ -101,7 +101,7 @@ this.$refs.simplert.openSimplert(obj)
 // to this way
 this.$Simplert.open(obj)
 ```
-+ And DONE !!!
++ And **DONE** :+1: !!!
 
 ## Credit 
 

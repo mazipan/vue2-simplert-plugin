@@ -40,7 +40,7 @@ npm i vue2-simplert-plugin --save
 Usually `main.js` or `index.js`
 
 ```javascript
-import Simplert from vue2-simplert-plugin
+import Simplert from 'vue2-simplert-plugin'
 Vue.use(Simplert)
 ```
 
@@ -71,7 +71,7 @@ If you already use [vue2-simplert](https://github.com/mazipan/vue2-simplert) in 
 + Make sure you add dependency `npm i vue2-simplert-plugin --save`
 + Import and use this plugin in your main app, ex : `main.js`
 ```javascript
-import Simplert from vue2-simplert-plugin
+import Simplert from 'vue2-simplert-plugin'
 Vue.use(Simplert)
 ```
 + Remove all import [vue2-simplert](https://github.com/mazipan/vue2-simplert) in your components and/or pages, because as Plugin you dont need to import in all components 

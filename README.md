@@ -24,7 +24,7 @@ When we using [vue2-simplert](https://github.com/mazipan/vue2-simplert), we will
 #### Yarn
 
 ```bash
-yan add vue2-simplert-plugin
+yarn add vue2-simplert-plugin
 ```
 
 #### NPM

@@ -1,25 +1,39 @@
 {
-  "name": "awesome-vue-list",
-  "description": "A curated list of awesome things related to Vue.js base on awesome-vue repository",
-  "version": "0.0.1",
+  "name": "vue2-simplert-plugin",
+  "description": "Vue2-Simplert as Vue.js Plugins",
+  "version": "0.0.2",
   "license": "MIT",
   "author": "Irfan Maulana (https://github.com/mazipan/)",
   "private": false,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --color --open",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "dist": "npm run lint && npm run build",
+    "pack": "cross-env NODE_ENV=production webpack --progress --hide-modules --config webpack.config.dist.js",
     "lint": "./node_modules/.bin/eslint --ext .js,.vue src test/*.js",
-    "test": "./node_modules/.bin/jest --coverage"
+    "test": "./node_modules/.bin/jest --coverage",
+    "dist": "npm run lint && npm run build && npm run pack"
   },
-  "homepage": "https://github.com/mazipan/awesome-vue-list/",
+  "homepage": "https://github.com/mazipan/vue2-simplert-plugin/",
+  "main": "dist/vue2-simplert-plugin.js",
+  "files": [
+    "dist/vue2-simplert-plugin.js",
+    "dist/vue2-simplert-plugin.js.map"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mazipan/awesome-vue-list.git"
+    "url": "https://github.com/mazipan/vue2-simplert-plugin.git"
   },
   "bugs": {
-    "url": "https://github.com/mazipan/awesome-vue-list/issues"
+    "url": "https://github.com/mazipan/vue2-simplert-plugin/issues"
   },
+  "keywords": [
+    "vue2 alert",
+    "vue2 sweet alert",
+    "vue2 popup",
+    "vue alert",
+    "vue sweet alert",
+    "vue popup"
+  ],
   "dependencies": {},
   "devDependencies": {
     "avoriaz": "^4.2.0",

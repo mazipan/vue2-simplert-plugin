@@ -1,99 +1,327 @@
 <template>
   <div id="app" class="app">
-    <section class="hero is-primary is-medium">
-    <!-- Hero content: will be in the middle -->
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <figure class="image is-128x128" style="margin:auto;">
-          <img src="https://github.com/vuejs/awesome-vue/raw/master/logo.svg?sanitize=true">
-        </figure>
-        
-        <h1 class="title">
-          awesome-vue-list
-        </h1>
-        <h2 class="subtitle">
-          A curated list of awesome things related to Vue.js base on awesome-vue repository
-        </h2>
-        <a class="button is-primary is-inverted is-outlined" 
-            href="https://github.com/mazipan/awesome-vue-list/issues">
-            Add new awesome thing
-        </a>
-      </div>
-    </div>
-  </section>
+    <div class="grid__row content centered">
+      <h2>Example</h2>
 
-    <div class="container is-fluid" style="margin-top: 20px;">      
-      <div class="columns is-centered" v-for="item in items" :key="item.link">
-        <div class="column is-8">
-          
-          <div class="card">
-            <header class="card-header">
-              <p class="card-header-title">
-                {{item.name}}
-              </p>
-            </header>
-            <div class="card-content">
-              <div class="content">
-                
-                
-                <p class="title is-4" v-if="item.description">{{item.description}}</p>
-                <p class="title is-4" v-if="!item.description">{{item.name}}</p>
+      <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Information Alert</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue" @click="open('Information!', 'Hey, I am Opened...', 'info')">
+            Click Me!
+          </button>
+        </div>
 
-                <p class="subtitle is-6" v-if="item.author">Author {{item.author}}</p>
-                
-
-                Link : <a :href="item.link" v-if="item.link" target="_blank">
-                  <span class="icon has-text-info">
-                    <i class="fa fa-external-link"></i>
-                  </span>
-                </a>
-
-                <div class="tags" v-if="item.group">
-                  <span class="tag is-primary" v-if="item.groupParent">{{item.groupParent}}</span>
-                  <span class="tag is-info">{{item.group}}</span>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          
+        <div class="grid__col-3 example__title">Success Alert</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--green" @click="open('Success!', 'Hey, I am Opened...', 'success')">
+            Click Me!
+          </button>
         </div>
       </div>
+
+      <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Error Alert</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--red" @click="open('Error!', 'Hey, I am Opened...', 'error')">
+            Click Me!
+          </button>
+        </div>
+
+        <div class="grid__col-3 example__title">Warning Alert</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--orange" @click="open('Warning!', 'Hey, I am Opened...', 'warning')">
+            Click Me!
+          </button>
+        </div>
+      </div>
+
+      <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Alert Without Title</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue" @click="open('', 'Hey, I am Opened, but I dont have title', '')">
+            Click Me!
+          </button>
+        </div>
+
+        <div class="grid__col-3 example__title">Alert With HTML</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--orange" @click="openCustomHtml">
+            Click Me!
+          </button>
+        </div>
+      </div>
+
+      <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Alert With Custom Close Text</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--green" @click="open('Custom Close Text', 'Hey, I am Opened...', '', '', 'Custom Close Text')">
+            Click Me!
+          </button>
+        </div>
+
+        <div class="grid__col-3 example__title">Alert With Custom Close Class</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue" @click="open('Custom Close Class', 'Hey, I am Opened...', '', '', '', 'button button--radius button--red')">
+            Click Me!
+          </button>
+        </div>
+      </div>
+
+      <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Alert With Custom Close Function</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--red" @click="openCustomFunction">
+            Click Me!
+          </button>
+        </div>
+
+        <div class="grid__col-3 example__title">Alert With Custom Class</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--red" @click="open('Custom Class', 'Hey, I am Opened...', '', '', '', '', 'custom-class')">
+            Click Me!
+          </button>
+        </div>
+      </div>
+
+      <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Alert With Custom Icon</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--green" @click="open('Custom Icon', 'Hey, I am Opened...', '', '', '', '', '', 'https://cdn2.iconfinder.com/data/icons/social-productivity-line-art-1/128/face-sad-512.png')">
+            Click Me!
+          </button>
+        </div>
+
+        <div class="grid__col-3 example__title">Alert With Confirm Button</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--red" @click="openWithConfirm('Confirm Button', 'Hey, I have Confirm Button Now', false)">
+            Click Me!
+          </button>
+        </div>
+      </div>
+
+      <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Alert With Confirm Button Custom Text</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue" @click="openWithConfirm('Confirm Button Custom Text', 'Hey, I am Opened...', false, 'Custom Text Confirm')">
+            Click Me!
+          </button>
+        </div>
+
+        <div class="grid__col-3 example__title">Alert With Confirm Function</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--orange" @click="openWithConfirm('Confirm Function', 'Click Confirm to trigger function', true)">
+            Click Me!
+          </button>
+        </div>
+      </div>
+
+      <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Alert With Confirm Button Custom Class</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue" @click="openWithConfirm('Confirm Button Custom Class', 'Hey, I am Opened...', false, '', 'button button--radius button--red')">
+            Click Me!
+          </button>
+        </div>
+
+        <div class="grid__col-3 example__title">Alert With Disable Overlay Click</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--green" @click="openDisabledOverlayClick">
+            Click Me!
+          </button>
+        </div>
+      </div>
+
+      <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Alert With All Button Hidden</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--orange" @click="openWithHiddenButton">
+            Click Me!
+          </button>
+        </div>
+
+        <div class="grid__col-3 example__title">Alert With Very Custom Style</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--green" @click="openWithStyle">
+            Click Me!
+          </button>
+        </div>
+
+      </div>
+
+      <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Alert with OnOpen Function</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue" @click="openWithOnOpen">
+            Click Me!
+          </button>
+        </div>
+
+        <div class="grid__col-3 example__title">Alert with X close button</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue" @click="openWithXbtn">
+            Click Me!
+          </button>
+        </div>
+      </div>
+
     </div>
+
+    <simplert></simplert>
   </div>
 </template>
 
 <script>
-import groups from './awesome-vue-group.js'
-import items from './awesome-vue.js'
-
 export default {
   name: 'app',
   data() {
-    return {
-      groups: groups.groups,
-      items: items.items
-    }
-  },
-  mounted () {
-    this.items = this.getGroupDetail()
+    return {}
   },
   methods: {
-    getGroupDetail: function () {
-      let self = this
-      let newItems = self.items.map(function(item){
-        let groups = self.groups.filter(function (group){
-          return item.group === group.groupId
-        })
-        let groupObj = groups[0]
-        let obj = Object.assign({}, item, groupObj)
-        return obj
-      })
+    open(title, message, type, color, customCloseBtnText, customCloseBtnClass, customClass, customIconUrl) {
+      let obj = {
+        title: title,
+        message: message,
+        type: type
+      }
 
-      return newItems
+      if (customCloseBtnText) {
+        obj.customCloseBtnText = customCloseBtnText
+      }
+
+      if (customCloseBtnClass) {
+        obj.customCloseBtnClass = customCloseBtnClass
+      }
+
+      if (customClass) {
+        obj.customClass = customClass
+      }
+
+      if (customIconUrl) {
+        obj.customIconUrl = customIconUrl
+      }
+
+      this.$Simplert.open(obj)
+    },
+
+    openCustomHtml() {
+      let obj = {
+        title: 'Custom HTML',
+        message: '<span style="color:red;">I am HTML</span>',
+        type: 'info'
+      }
+
+      this.$Simplert.open(obj)
+    },
+
+    onOpen() {
+      alert("Hey, I am called when alert is opened")
+    },
+
+    onClose() {
+      alert('Hey, I am Close Function')
+    },
+
+    onConfirm() {
+      alert('Hey, You Confirmed')
+    },
+
+    openCustomFunction() {
+      let obj = {
+        title: 'Custom Function',
+        message: 'Click close to trigger custom function',
+        type: 'info',
+        onClose: this.onClose
+      }
+
+      this.$Simplert.open(obj)
+    },
+
+    openWithOnOpen() {
+      let obj = {
+        title: 'On Open Function',
+        message: 'There should be an alert before you see this',
+        type: 'info',
+        onOpen: this.onOpen
+      }
+
+      this.$Simplert.open(obj)
+    },
+
+    openWithConfirm(title, message, isCustomFunction, customConfirmBtnText, customConfirmBtnClass) {
+      let obj = {
+        title: title,
+        message: message,
+        type: 'info',
+        useConfirmBtn: true,
+      }
+
+      if (isCustomFunction) {
+        obj.onConfirm = this.onConfirm
+      }
+
+      if (customConfirmBtnText) {
+        obj.customConfirmBtnText = customConfirmBtnText
+      }
+
+      if (customConfirmBtnClass) {
+        obj.customConfirmBtnClass = customConfirmBtnClass
+      }
+
+      this.$Simplert.open(obj)
+    },
+
+    openDisabledOverlayClick() {
+      let obj = {
+        title: 'Disable Overlay Click',
+        message: 'Now You can not close me by clicking overlay',
+        type: 'info',
+        disableOverlayClick: true
+      }
+
+      this.$Simplert.open(obj)
+    },
+
+    openWithHiddenButton() {
+      let obj = {
+        title: 'Hey, I am Title',
+        message: 'I am Message',
+        type: 'info',
+        hideAllButton: true
+      }
+
+      this.$Simplert.open(obj)
+    },
+
+    openWithXbtn() {
+      let obj = {
+        title: 'Hey, I am Title',
+        message: 'I am Message',
+        type: 'info',
+        showXclose: true
+      }
+
+      this.$Simplert.open(obj)
+    },
+
+    openWithStyle() {
+      let obj = {
+        title: 'Confirmation',
+        message: 'Do you want to procced ?',
+        customClass: 'custom-simplert',
+        customIconUrl: '',
+        customCloseBtnText: 'No, Just Close',
+        customCloseBtnClass: 'no-procced-btn',
+        onClose: this.onClose,
+        useConfirmBtn: true,
+        customConfirmBtnText: 'Yes, Procced Me',
+        customConfirmBtnClass: 'procced-btn',
+        onConfirm: this.onConfirm
+      }
+
+      this.$Simplert.open(obj)
     }
   }
 }
 </script>
 
-<style lang="css" src="./app.css"></style>
+<style lang="css" src="./demo.css"></style>

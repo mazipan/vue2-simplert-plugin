@@ -1,12 +1,17 @@
 var path = require('path')
 var webpack = require('webpack')
+var npm = require('./package.json')
 
 module.exports = {
-  entry: './src/demo.js',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'build.js'
+    publicPath: '/dist',
+    filename: 'vue2-simplert-plugin.js',
+    library: 'Simplert',
+    libraryTarget: 'umd',
+    umdNamedDefine: true,
+    jsonpFunction: 'WebpackJsonp'
   },
   module: {
     rules: [
@@ -43,14 +48,10 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js'
     }
   },
-  devServer: {
-    historyApiFallback: true,
-    noInfo: true
+  externals: {
+    'vue': 'Vue'
   },
-  performance: {
-    hints: false
-  },
-  devtool: '#eval-source-map'
+  devtool: '#source-map'
 }
 
 if (process.env.NODE_ENV === 'production') {
@@ -70,6 +71,9 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
+    }),
+    new webpack.BannerPlugin({
+      banner: `vue2-simplert-plugin v.${npm.version}\nIrfan Maulana (https://github.com/mazipan)`
     })
   ])
 }

@@ -6,9 +6,6 @@ if (process.env.NODE_ENV !== 'production') {
   Vue.config.devtools = true
 }
 
-import Simplert from './index.js'
-Vue.use(Simplert, {})
-
 new Vue({
   el: '#app',
   template: '<App/>',

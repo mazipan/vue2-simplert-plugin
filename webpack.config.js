@@ -1,8 +1,9 @@
 var path = require('path')
 var webpack = require('webpack')
+var npm = require('./package.json')
 
 module.exports = {
-  entry: './src/demo.js',
+  entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -18,6 +19,7 @@ module.exports = {
             // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
             // the "scss" and "sass" values for the lang attribute to the right configs here.
             // other preprocessors should work out of the box, no loader config like this necessary.
+            'css': 'vue-style-loader!css-loader',
             'scss': 'vue-style-loader!css-loader!sass-loader',
             'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
           }
@@ -70,6 +72,9 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
+    }),
+    new webpack.BannerPlugin({
+      banner: `awesome-vue-list v.${npm.version}\nIrfan Maulana (https://github.com/mazipan)`
     })
   ])
 }

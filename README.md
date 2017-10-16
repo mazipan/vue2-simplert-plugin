@@ -1,111 +1,19 @@
-# vue2-simplert-plugin
+# awesome-vue-list
 
-[![License](https://img.shields.io/github/license/mazipan/vue2-simplert-plugin.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert-plugin) 
-[![Github Issue](https://img.shields.io/github/issues/mazipan/vue2-simplert-plugin.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert-plugin/issues) 
-[![GitHub Fork](https://img.shields.io/github/forks/mazipan/vue2-simplert-plugin.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert-plugin/network/members) 
-[![GitHub Star](https://img.shields.io/github/stars/mazipan/vue2-simplert-plugin.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert-plugin/stargazers) 
+[![License](https://img.shields.io/github/license/mazipan/awesome-vue-list.svg?maxAge=3600)](https://github.com/mazipan/awesome-vue-list) 
+[![Github Issue](https://img.shields.io/github/issues/mazipan/awesome-vue-list.svg?maxAge=3600)](https://github.com/mazipan/awesome-vue-list/issues) 
+[![GitHub Fork](https://img.shields.io/github/forks/mazipan/awesome-vue-list.svg?maxAge=3600)](https://github.com/mazipan/awesome-vue-list/network/members) 
+[![GitHub Star](https://img.shields.io/github/stars/mazipan/awesome-vue-list.svg?maxAge=3600)](https://github.com/mazipan/awesome-vue-list/stargazers) 
 
-[![version](https://img.shields.io/npm/v/vue2-simplert-plugin.svg)](https://www.npmjs.com/package/vue2-simplert-plugin)
-[![downloads monthly](https://img.shields.io/npm/dm/vue2-simplert-plugin.svg)](https://www.npmjs.com/package/vue2-simplert-plugin) 
-[![downloads](https://img.shields.io/npm/dt/vue2-simplert-plugin.svg)](https://www.npmjs.com/package/vue2-simplert-plugin) 
+![Awesome Vue](https://github.com/vuejs/awesome-vue/raw/master/logo.svg?sanitize=true)
 
-:warning:  Vue2-Simplert as Vue.js Plugins
 
-## Why we need ?
+## A curated list of awesome things related to Vue.js base on awesome-vue repository
 
-When we using [vue2-simplert](https://github.com/mazipan/vue2-simplert), we will need to `import` the library in every place we need. This is very bored because we do same task in many place. In [vue2-simplert](https://github.com/mazipan/vue2-simplert) we need to access method inside using `$refs` which is not recommended. For solving those problems I reborn [vue2-simplert](https://github.com/mazipan/vue2-simplert) as Vue.js Plugins and using EventBus for open/close.
-
-## Demo
-
-[https://mazipan.github.io/vue2-simplert-plugin/](https://mazipan.github.io/vue2-simplert-plugin/)
-
-## Install
-
-#### Yarn
-
-```bash
-yan add vue2-simplert-plugin
-```
-
-#### NPM
-
-```bash
-npm i vue2-simplert-plugin --save
-```
-
-## How to use
-
-#### Import in your root project
-
-Usually `main.js` or `index.js`
-
-```javascript
-import Simplert from vue2-simplert-plugin
-Vue.use(Simplert)
-```
-
-#### Add template in your root Vue 
-
-Usually `App.vue`
-
-```html
-<simplert></simplert>
-```
-
-#### Open/Close Popup
-
-For open popup :
-```javascript
-this.$Simplert.open(obj)
-```
-Object that pass is same with [vue2-simplert](https://github.com/mazipan/vue2-simplert), please read [wiki](https://github.com/mazipan/vue2-simplert/wiki/Methods-And-Props).
-
-For close popup :
-```javascript
-this.$Simplert.close()
-```
-
-## Migration from [vue2-simplert](https://github.com/mazipan/vue2-simplert)
-
-If you already use [vue2-simplert](https://github.com/mazipan/vue2-simplert) in your project, please follow this below guide :
-+ Make sure you add dependency `npm i vue2-simplert-plugin --save`
-+ Import and use this plugin in your main app, ex : `main.js`
-```javascript
-import Simplert from vue2-simplert-plugin
-Vue.use(Simplert)
-```
-+ Remove all import [vue2-simplert](https://github.com/mazipan/vue2-simplert) in your components and/or pages, because as Plugin you dont need to import in all components 
-```javascript
-import Simplert from 'vue2-simplert'
-```
-+ Remove all adding component [vue2-simplert](https://github.com/mazipan/vue2-simplert) in your components and/or pages, because you dont need set components again
-```javascript
-components: {Simplert}
-```
-+ Remove all template html snippet in each components
-```html
-<simplert :useRadius="true"
-          :useIcon="true"
-          ref="simplert">
-</simplert>
-```
-+ Add new html snippet in root application, ex : `App.vue`
-```html
-<simplert>
-</simplert>
-```
-+ Change all call method open with new plugin method, you dont need to change all configuration
-```javascript
-// change this call
-this.$refs.simplert.openSimplert(obj)
-// to this way
-this.$Simplert.open(obj)
-```
-+ And **DONE** :+1: !!!
 
 ## Credit 
 
-+ Icon from [SweetAlert](https://github.com/t4t5/sweetalert)
++ [awesome-vue](https://github.com/vuejs/awesome-vue)
 
 **Hope will usefull for you all.**
 

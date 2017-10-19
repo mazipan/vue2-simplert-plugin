@@ -71,7 +71,10 @@ const Simplert = {
       }
     })
 
-    window.SimplertEventBus = SimplertEventBus
+    if (window) {
+      window.SimplertEventBus = SimplertEventBus
+    }
+    
     SimplertPlugin.init(SimplertEventBus)
 
     Vue.component('simplert', SimplertComponent)

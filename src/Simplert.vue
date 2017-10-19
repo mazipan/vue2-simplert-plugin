@@ -290,7 +290,9 @@ export default {
     }
   },
   created () {
-    this.eventBus = window.SimplertEventBus.CONFIG.options
+    if (window) {
+      this.eventBus = window.SimplertEventBus.CONFIG.options
+    }
   }
 }
 </script>

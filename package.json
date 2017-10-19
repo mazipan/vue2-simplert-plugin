@@ -1,7 +1,7 @@
 {
   "name": "vue2-simplert-plugin",
   "description": "Vue2-Simplert as Vue.js Plugins",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "license": "MIT",
   "author": "Irfan Maulana (https://github.com/mazipan/)",
   "private": false,
@@ -17,6 +17,7 @@
   "main": "dist/vue2-simplert-plugin.js",
   "files": [
     "dist/vue2-simplert-plugin.js",
+    "dist/vue2-simplert-plugin.js.gz",
     "dist/vue2-simplert-plugin.js.map"
   ],
   "repository": {
@@ -36,49 +37,43 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "avoriaz": "^4.2.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.0",
-    "cross-env": "^5.0.5",
+    "babel-preset-env": "^1.6.1",
+    "compression-webpack-plugin": "^1.0.1",
+    "cross-env": "^5.1.0",
     "css-loader": "^0.28.7",
-    "eslint": "^4.6.1",
+    "eslint": "^4.9.0",
     "eslint-plugin-vue": "3.13.0",
-    "file-loader": "^0.11.2",
-    "jest": "^21.1.0",
-    "jest-vue-preprocessor": "^1.1.0",
+    "file-loader": "^1.1.5",
+    "jest": "^21.2.1",
+    "jest-vue": "^0.8.1",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
     "vue": "^2.4.4",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.8.2"
+    "vue-test-utils": "^1.0.0-beta.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.2"
   },
-  "babel": {
-    "presets": [
-      "env"
-    ]
-  },
+  "eslintIgnore": [
+    "test/*.js",
+    "dist/*.js",
+    "node_modules"
+  ],
   "eslintConfig": {
     "extends": [
       "eslint:recommended",
       "plugin:vue/recommended"
     ]
   },
-  "eslintIgnore": [
-    "dist/*.js",
-    "build/*.js",
-    "config/*.js",
-    "dist",
-    "node_modules"
-  ],
   "jest": {
+    "mapCoverage": true,
     "coverageDirectory": "test/coverage",
     "moduleNameMapper": {
-      "^vue$": "vue/dist/vue.common.js",
-      "src/([^\\.]*)$": "<rootDir>/src/$1.vue"
+      "^vue$": "vue/dist/vue.common.js"
     },
     "moduleFileExtensions": [
       "js",
@@ -86,7 +81,7 @@
     ],
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
-      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor"
+      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue"
     }
   }
 }

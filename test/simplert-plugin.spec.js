@@ -1,19 +1,19 @@
-import { createLocalVue, shallow } from 'vue-test-utils'
+import { createLocalVue, mount } from 'vue-test-utils'
 
 import App from '../src/App.vue'
 import Simplert from '../src/index.js'
 
-describe('test Simplert', () => {
-  it('Test use plugin simplert', () => {    
+describe('App.vue', () => {
+  it('should be success mounted', () => {    
     let localVue = createLocalVue()
     
     localVue.use(Simplert)
 
-    let wrapper = shallow(App, {
+    let wrapper = mount(App, {
       localVue
     })
 
-    let div = wrapper.find('.simplert')
+    let div = wrapper.find('.app')
     expect(div.is('div')).toBe(true)
   })
 });

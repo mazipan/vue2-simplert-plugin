@@ -289,7 +289,7 @@ export default {
     }
   },
   created () {
-    if (inBrowser) {
+    if (inBrowser && window.SimplertEventBus) {
       this.eventBus = window.SimplertEventBus.CONFIG.options
     } else {
       this.eventBus = configDefaultConfig.config;

@@ -1,9 +1,14 @@
-import { shallow } from 'vue-test-utils'
+const { JSDOM } = require('jsdom');
+
+const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
+const { window } = jsdom;
+
+import { mount } from 'vue-test-utils'
 import Simplert from '../src/Simplert.vue'
 
-describe('test Simplert', () => {
-  it('Test simplert.vue', () => {    
-    let wrapper = shallow(Simplert)
+describe('Simplert.vue', () => {
+  it('should be success mounted', () => {    
+    let wrapper = mount(Simplert)
 
     let div = wrapper.find('.simplert')
     expect(div.is('div')).toBe(true)

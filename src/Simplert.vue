@@ -50,10 +50,9 @@
 </template>
 
 <script type="text/javascript">
-/*!
-* Vue2-Simplert
-* @author : Irfan Maulana (https://github.com/mazipan)
-**/
+import configDefaultConfig from './simplert-default-config'
+
+const inBrowser = typeof window !== 'undefined'
 export default {
   name: 'Simplert',
   props: {
@@ -290,8 +289,10 @@ export default {
     }
   },
   created () {
-    if (window) {
+    if (inBrowser) {
       this.eventBus = window.SimplertEventBus.CONFIG.options
+    } else {
+      this.eventBus = configDefaultConfig.config;
     }
   }
 }

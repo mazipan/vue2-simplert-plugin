@@ -12,40 +12,40 @@ export default {
     useIcon: {
       type: Boolean,
       default: true
+    },
+    enableLog: {
+      type: Boolean,
+      default: false
     }
   },
 
   data: function () {
     return {
       eventBus: null,
-      DEFAULT_TYPE: 'info',
-      DEFAULT_BTN_CLOSE_TEXT: 'Close',
-      DEFAULT_BTN_CONFIRM_TEXT: 'Confirm',
-      INVALID_TYPE: 'INVALID_TYPE',
       // hide/show alert
       showSimplert: false,
       // basic setup
       title: '',
       message: '',        
-      type: this.DEFAULT_TYPE, // info (default), success, warning, error
+      type: configDefaultConfig.defaultCons.DEFAULT_TYPE, // info (default), success, warning, error
       customClass: '',
       customIconUrl: '',
       // open event
       onOpen: null,
       // close button
-      customCloseBtnText: this.DEFAULT_BTN_CLOSE_TEXT,
+      customCloseBtnText: configDefaultConfig.defaultCons.DEFAULT_BTN_CLOSE_TEXT,
       customCloseBtnClass: '',
       onClose: null,
       // confirm button
       useConfirmBtn: false,
-      customConfirmBtnText: this.DEFAULT_BTN_CONFIRM_TEXT,
+      customConfirmBtnText: configDefaultConfig.defaultCons.DEFAULT_BTN_CONFIRM_TEXT,
       customConfirmBtnClass: '',
       onConfirm: null,
       // disabled overlay
       disableOverlayClick: false,
       hideAllButton: false,
       // x close
-      showXclose: false
+      showXclose: false,
     }
   },
 
@@ -143,11 +143,10 @@ export default {
         } else {
           _self.message = ''
         }
-
         if (typeof obj.type !== 'undefined') {
           _self.type = obj.type
         } else {
-          _self.type = _self.DEFAULT_TYPE
+          _self.type = configDefaultConfig.config.type
         }
 
         if (typeof obj.customClass !== 'undefined') {
@@ -156,9 +155,9 @@ export default {
           _self.customClass = ''
         }
 
-        if (typeof obj.customIconUrl !== 'undefined' && obj.customCloseBtnText !== '') {
+        if (typeof obj.customIconUrl !== 'undefined' && obj.customIconUrl !== '') {
           _self.customIconUrl = obj.customIconUrl
-          _self.type = _self.INVALID_TYPE
+          _self.type = configDefaultConfig.defaultCons.INVALID_TYPE
         } else {
           _self.customIconUrl = ''
         }
@@ -167,7 +166,7 @@ export default {
         if (typeof obj.customCloseBtnText !== 'undefined' && obj.customCloseBtnText !== '') {
           _self.customCloseBtnText = obj.customCloseBtnText
         } else {
-          _self.customCloseBtnText = _self.DEFAULT_BTN_CLOSE_TEXT
+          _self.customCloseBtnText = configDefaultConfig.defaultCons.DEFAULT_BTN_CLOSE_TEXT
         }
 
         if (typeof obj.customCloseBtnClass !== 'undefined') {
@@ -192,7 +191,7 @@ export default {
         if (typeof obj.customConfirmBtnText !== 'undefined' && obj.customConfirmBtnText !== '') {
           _self.customConfirmBtnText = obj.customConfirmBtnText
         } else {
-          _self.customConfirmBtnText = _self.DEFAULT_BTN_CONFIRM_TEXT
+          _self.customConfirmBtnText = configDefaultConfig.defaultCons.DEFAULT_BTN_CONFIRM_TEXT
         }
 
         if (typeof obj.customConfirmBtnClass !== 'undefined') {
@@ -234,6 +233,9 @@ export default {
         if (_self.onOpen !== null) {
           _self.onOpen()
         }
+      }
+      if (this.enableLog) {
+        console.log(_self)
       }
     }
   },

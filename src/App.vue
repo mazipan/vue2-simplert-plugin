@@ -164,6 +164,15 @@
         </div>
       </div>
 
+      <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Call another alert</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue" @click="callAnotherSimplert">
+            Click Me!
+          </button>
+        </div>
+      </div>
+
     </div>
 
     <simplert></simplert>

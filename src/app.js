@@ -147,6 +147,26 @@ export default {
       }
 
       this.$Simplert.open(obj)
+    },
+
+    callAnotherSimplert() {
+      let confirm = () => {
+        let obj = {
+          title: 'Hey, I am Triggered',
+          message: 'You have success open new simplert'
+        }
+        setTimeout(()=> {
+          this.$Simplert.open(obj)
+        }, 500);
+      }
+      let obj = {
+        title: 'Open Another Simplert',
+        message: 'Click confirm to show another simplert',
+        useConfirmBtn: true,
+        onConfirm: confirm
+      }
+
+      this.$Simplert.open(obj)
     }
   }
 }

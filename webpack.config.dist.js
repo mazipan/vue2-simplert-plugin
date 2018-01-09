@@ -4,7 +4,7 @@ var npm = require("./package.json")
 const CompressionPlugin = require("compression-webpack-plugin")
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/simplert-plugin.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist',

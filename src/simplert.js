@@ -1,7 +1,6 @@
-
 import configDefaultConfig from './simplert-default-config'
+import { SimplertEventBus } from './simplert-event-bus.js'
 
-const inBrowser = typeof window !== 'undefined'
 export default {
   name: 'Simplert',
   props: {
@@ -26,7 +25,7 @@ export default {
       showSimplert: false,
       // basic setup
       title: '',
-      message: '',        
+      message: '',
       type: configDefaultConfig.defaultCons.DEFAULT_TYPE, // info (default), success, warning, error
       customClass: '',
       customIconUrl: '',
@@ -54,7 +53,7 @@ export default {
       var clasz = this.customClass
       if (this.showSimplert) {
         clasz = this.customClass + ' simplert--shown'
-      } 
+      }
       return clasz
     },
 
@@ -62,7 +61,7 @@ export default {
       var clasz = ''
       if (this.useRadius) {
         clasz = 'simplert__content--radius'
-      } 
+      }
       return clasz
     },
 
@@ -89,17 +88,8 @@ export default {
     }
   },
 
-  watch: {
-    'eventBus.show': function (val) {
-      if (val === true) {
-        this.openSimplert(this.eventBus)
-      } else this.justCloseSimplert()
-    }
-  },
-
   methods: {
     justCloseSimplert: function () {
-      this.eventBus.show = false
       this.showSimplert = false
     },
 
@@ -240,10 +230,8 @@ export default {
     }
   },
   created () {
-    if (inBrowser && window.SimplertEventBus) {
-      this.eventBus = window.SimplertEventBus.CONFIG.options
-    } else {
-      this.eventBus = configDefaultConfig.config;
-    }
+    // listen eventBus
+    SimplertEventBus.$on('open', this.openSimplert);
+    SimplertEventBus.$on('close', this.justCloseSimplert);
   }
 }

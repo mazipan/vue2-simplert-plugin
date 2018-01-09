@@ -6,7 +6,7 @@ if (process.env.NODE_ENV !== 'production') {
   Vue.config.devtools = true
 }
 
-import Simplert from './index.js'
+import Simplert from './simplert-plugin.js'
 Vue.use(Simplert, {})
 
 new Vue({

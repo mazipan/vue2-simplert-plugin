@@ -175,7 +175,7 @@
 
     </div>
 
-    <simplert></simplert>
+    <simplert/>
   </div>
 </template>
 

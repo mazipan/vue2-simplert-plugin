@@ -9,9 +9,9 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --color --open",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "pack": "cross-env NODE_ENV=production webpack --progress --hide-modules --config webpack.config.dist.js",
-    "lint": "./node_modules/.bin/eslint --ext .js,.vue src test/*.js",
+    "lint": "./node_modules/.bin/eslint --ext .js,.vue src test/*.js --fix",
     "test": "./node_modules/.bin/jest --coverage",
-    "dist": "npm run lint && npm run build && npm run pack"
+    "dist": "npm run build && npm run pack"
   },
   "homepage": "https://github.com/mazipan/vue2-simplert-plugin/",
   "main": "dist/vue2-simplert-plugin.js",

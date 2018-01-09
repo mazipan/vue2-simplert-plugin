@@ -1,15 +1,6 @@
 # vue2-simplert-plugin
 
-[![License](https://img.shields.io/github/license/mazipan/vue2-simplert-plugin.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert-plugin) 
-[![Github Issue](https://img.shields.io/github/issues/mazipan/vue2-simplert-plugin.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert-plugin/issues) 
-[![GitHub Fork](https://img.shields.io/github/forks/mazipan/vue2-simplert-plugin.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert-plugin/network/members) 
-[![GitHub Star](https://img.shields.io/github/stars/mazipan/vue2-simplert-plugin.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert-plugin/stargazers) 
-
-[![version](https://img.shields.io/npm/v/vue2-simplert-plugin.svg)](https://www.npmjs.com/package/vue2-simplert-plugin)
-[![downloads monthly](https://img.shields.io/npm/dm/vue2-simplert-plugin.svg)](https://www.npmjs.com/package/vue2-simplert-plugin) 
-[![downloads](https://img.shields.io/npm/dt/vue2-simplert-plugin.svg)](https://www.npmjs.com/package/vue2-simplert-plugin) 
-
-[![Travis](https://img.shields.io/travis/mazipan/vue2-simplert-plugin.svg)](https://travis-ci.org/mazipan/vue2-simplert-plugin)
+[![License](https://img.shields.io/github/license/mazipan/vue2-simplert-plugin.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert-plugin) [![version](https://img.shields.io/npm/v/vue2-simplert-plugin.svg)](https://www.npmjs.com/package/vue2-simplert-plugin) [![downloads](https://img.shields.io/npm/dt/vue2-simplert-plugin.svg)](https://www.npmjs.com/package/vue2-simplert-plugin) [![Travis](https://img.shields.io/travis/mazipan/vue2-simplert-plugin.svg)](https://travis-ci.org/mazipan/vue2-simplert-plugin)
 [![codecov](https://codecov.io/gh/mazipan/vue2-simplert-plugin/branch/master/graph/badge.svg)](https://codecov.io/gh/mazipan/vue2-simplert-plugin)
 
 :warning:  Vue2-Simplert as Vue.js Plugins
@@ -47,7 +38,7 @@ import Simplert from 'vue2-simplert-plugin'
 Vue.use(Simplert)
 ```
 
-#### Add template in your root Vue 
+#### Add template in your root Vue
 
 Usually `App.vue`
 
@@ -77,7 +68,7 @@ If you already use [vue2-simplert](https://github.com/mazipan/vue2-simplert) in 
 import Simplert from 'vue2-simplert-plugin'
 Vue.use(Simplert)
 ```
-+ Remove all import [vue2-simplert](https://github.com/mazipan/vue2-simplert) in your components and/or pages, because as Plugin you dont need to import in all components 
++ Remove all import [vue2-simplert](https://github.com/mazipan/vue2-simplert) in your components and/or pages, because as Plugin you dont need to import in all components
 ```javascript
 import Simplert from 'vue2-simplert'
 ```
@@ -106,22 +97,16 @@ this.$Simplert.open(obj)
 ```
 + And **DONE** :+1: !!!
 
-## Credit 
+## Credit
 
 + Icon from [SweetAlert](https://github.com/t4t5/sweetalert)
 
 ## Contributing
-  
+
 If you'd like to contribute, head to the [contributing guidelines](/CONTRIBUTING.md). Inside you'll find directions for opening issues, coding standards, and notes on development.
 
 **Hope will usefull for you all.**
 
 Contact Me :
 
-[![Email](https://img.shields.io/badge/mazipanneh-Email-yellow.svg?maxAge=3600)](mailto:mazipanneh@gmail.com) 
-[![Website](https://img.shields.io/badge/mazipanneh-Blog-brightgreen.svg?maxAge=3600)](https://mazipanneh.com/blog/)
-[![Facebook](https://img.shields.io/badge/mazipanneh-Facebook-blue.svg?maxAge=3600)](https://facebook.com/mazipanneh) 
-
-[![Twitter](https://img.shields.io/badge/Maz_Ipan-Twitter-55acee.svg?maxAge=3600)](https://twitter.com/Maz_Ipan) 
-[![Linkedin](https://img.shields.io/badge/irfanmaulanamazipan-Linkedin-0077b5.svg?maxAge=3600)](https://id.linkedin.com/in/irfanmaulanamazipan) 
-[![Slideshare](https://img.shields.io/badge/IrfanMaulana21-Slideshare-0077b5.svg?maxAge=3600)](https://www.slideshare.net/IrfanMaulana21) 
+[![Email](https://img.shields.io/badge/mazipanneh-Email-yellow.svg?maxAge=3600)](mailto:mazipanneh@gmail.com) [![Facebook](https://img.shields.io/badge/mazipanneh-Facebook-blue.svg?maxAge=3600)](https://facebook.com/mazipanneh) [![Twitter](https://img.shields.io/badge/Maz_Ipan-Twitter-55acee.svg?maxAge=3600)](https://twitter.com/Maz_Ipan)

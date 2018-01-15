@@ -1,6 +1,7 @@
+import configDefaultConfig from 'vue2-simplert-core/simplert-config'
+
 import SimplertComponent from './Simplert.vue'
-import configDefaultConfig from './simplert-default-config'
-import { SimplertEventBus } from './simplert-event-bus.js';
+import { SimplertEventBus } from './simplert-event-bus.js'
 
 const Simplert = {
   install (Vue = {}) {

@@ -1,11 +1,8 @@
-import configDefaultConfig from 'vue2-simplert-core/simplert-config'
-
 import SimplertComponent from './Simplert.vue'
 import { SimplertEventBus } from './simplert-event-bus.js'
 
 const Simplert = {
   install (Vue = {}) {
-    const simplertOptions = configDefaultConfig.config
 
     let SimplertPlugin = {
       $vm: null,
@@ -24,11 +21,7 @@ const Simplert = {
       }
     }
 
-    const SimplertInstance = new Vue({
-      data: {
-        simplertOptions
-      }
-    })
+    const SimplertInstance = new Vue();
     SimplertPlugin.init(SimplertInstance)
 
     Vue.component('simplert', SimplertComponent)

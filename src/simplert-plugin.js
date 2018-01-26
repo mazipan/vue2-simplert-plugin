@@ -13,16 +13,15 @@ const Simplert = {
       open(obj) {
         if (!this.$vm) return
         obj.show = true
-        SimplertEventBus.$emit('open', obj);
+        this.$vm.$emit('open', obj);
       },
       close() {
         if (!this.$vm) return
-        SimplertEventBus.$emit('close');
+        this.$vm.$emit('close');
       }
     }
 
-    const SimplertInstance = new Vue();
-    SimplertPlugin.init(SimplertInstance)
+    SimplertPlugin.init(SimplertEventBus)
 
     Vue.component('simplert', SimplertComponent)
     Vue.prototype.$Simplert = SimplertPlugin

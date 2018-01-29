@@ -1,35 +1,31 @@
-import configDefaultConfig from 'vue2-simplert-core/simplert-config'
-
 import SimplertComponent from './Simplert.vue'
 import { SimplertEventBus } from './simplert-event-bus.js'
 
 const Simplert = {
-  install (Vue = {}) {
-    const simplertOptions = configDefaultConfig.config
+  install (Vue = {}, options = {}) {
 
     let SimplertPlugin = {
       $vm: null,
       state: {},
-      init(vm) {
+      data: {
+        options: {}
+      },
+      init(vm, opts) {
         this.$vm = vm
+        this.options = opts;
       },
       open(obj) {
         if (!this.$vm) return
         obj.show = true
-        SimplertEventBus.$emit('open', obj);
+        this.$vm.$emit('open', Object.assign({}, this.options, obj));
       },
       close() {
         if (!this.$vm) return
-        SimplertEventBus.$emit('close');
+        this.$vm.$emit('close');
       }
     }
 
-    const SimplertInstance = new Vue({
-      data: {
-        simplertOptions
-      }
-    })
-    SimplertPlugin.init(SimplertInstance)
+    SimplertPlugin.init(SimplertEventBus, options)
 
     Vue.component('simplert', SimplertComponent)
     Vue.prototype.$Simplert = SimplertPlugin

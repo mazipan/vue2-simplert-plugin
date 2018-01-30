@@ -1,5 +1,33 @@
 <template>
   <div id="app" class="app">
+
+
+    <header role="header" class="site__header header">
+      <div class="header__wrapper">
+        <div class="header__brand">
+          <a href="https://mazipan.github.io/demo/">
+            <img src="https://mazipan.github.io/images/irfan-maulana.jpg" alt="Irfan Maulana" title="Irfan Maulana">
+          </a>
+          <div class="header__title">Irfan Maulana | Demo</div>
+        </div>
+
+        <a href="https://github.com/mazipan/vue2-simplert-plugin"
+            target="_blank" style="margin-right: 2em;">
+          <SocialGithubIcon w="30px" h="30px"/>
+        </a>
+
+      </div>
+    </header>
+
+    <div class="grid__row centered" style="margin-bottom:1em;">
+      <h1 class="centered">
+        {{ title }}
+        <small> {{ subtitle }} </small>
+      </h1>
+
+      <img src="https://mazipan.github.io/vue2-simplert/images/vue2-simplert-logo.png" alt="Vue2-Simplert" title="Vue2-Simplert">
+    </div>
+
     <div class="grid__row content centered">
       <h2>Example</h2>
 
@@ -175,9 +203,202 @@
 
     </div>
 
+    <div class="grid__row content centered">
+      <h2>Contribute</h2>
+      <p>Feel free to fork <i class="fa fa-code-fork"></i> on <a href="https://github.com/mazipan/vue2-simplert-plugin" target="_blank">GitHub <i class="fa fa-github"></i></a> if you have any features <i class="fa fa-cart-plus"></i> or bugs <i class="fa fa-bug"></i>!</p>
+    </div>
+    <div class="grid__row content centered">
+      <h2>Contact Developer</h2>
+      <p>
+        <a href="https://github.com/mazipan">
+          <SocialGithubIcon w="30px" h="30px"/>
+        </a>
+        <a href="mailto:mazipanneh@gmail.com">
+          <IosEmailIcon w="30px" h="30px" />
+        </a>
+        <a href="https://facebook.com/mazipanneh">
+          <SocialFacebookIcon w="30px" h="30px"/>
+        </a>
+        <a href="https://twitter.com/Maz_Ipan">
+          <SocialTwitterIcon w="30px" h="30px"/>
+        </a>
+        <a href="https://id.linkedin.com/in/irfanmaulanamazipan">
+          <SocialLinkedinIcon w="30px" h="30px"/>
+        </a>
+      </p>
+    </div>
+    <div class="grid__row content centered">
+      <p>Copyright © 2017 <a href="https://mazipanneh.com/blog/">Irfan Maulana</a>, All Rights Reserved.</p>
+    </div>
+
     <simplert/>
   </div>
 </template>
 
 <script src="./app.js"></script>
-<style lang="css" src="./demo.css"></style>
+
+<style lang="scss">
+
+// import ionicons global scss
+@import "~vue-ionicons/ionicons.scss";
+
+body {
+    background-color: #f2f4f6;
+}
+
+.btn-top
+{
+    font-weight: 500;
+
+    text-transform: uppercase;
+}
+
+.example__title
+{
+    font-size: 1.6rem;
+
+    color: #a6b6b9;
+}
+
+.content__row
+{
+    margin: 20px 0 !important;
+}
+
+.content
+{
+    margin: 20px 0;
+}
+
+.custom-class
+{
+    .simplert__content
+    {
+        color: #fff !important;
+        background-color: purple !important;
+    }
+}
+
+.users
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+
+.users li
+{
+    display: inline-block;
+
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.users li a
+{
+    display: block;
+
+    padding: 20px;
+
+    transition: all .3s ease;
+}
+
+.users li a:hover
+{
+    background-color: darken(#f2f4f6, 10%);
+}
+
+.users li a img
+{
+    max-width: 100%;
+    height: 40px;
+}
+
+.add-button
+{
+    font-size: 3rem;
+}
+
+@media (max-width: 768px)
+{
+    .header__title img
+    {
+        width: 80%;
+    }
+    .fixed-top
+    {
+        position: inherit;
+    }
+    .grid__col-3
+    {
+        padding: .5em 1em;
+
+        text-align: center;
+    }
+}
+
+.custom-simplert
+{
+    color: #666;
+}
+.procced-btn
+{
+    outline: none;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    display: block !important;
+    width: 100% !important;
+    margin: 5px !important;
+    padding: 15px 20px !important;
+    background-color: #f7931e !important;
+    color: #fff;
+    border-radius: .25em;
+}
+.no-procced-btn
+{
+    outline: none;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    display: block !important;
+
+    width: 100% !important;
+    margin: 5px !important;
+    padding: 15px 20px !important;
+
+    color: #0096d9 !important;
+    border: 1px solid #0096d9 !important;
+    background-color: white !important;
+    border-radius: .25em;
+}
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+small{
+  display: block;
+  color: #ddd;
+  font-size: 16px;
+}
+
+.grid__row { *zoom: 1; margin: 0 auto; max-width: 92.308em; }
+.grid__row:before, .grid__row:after { display: table; content: ' '; }
+.grid__row:after { clear: both; }
+.centered { text-align: center; }
+
+.ion{
+  &:hover{
+    color: #4F8EF7;
+  }
+}
+</style>
+

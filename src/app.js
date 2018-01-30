@@ -1,8 +1,23 @@
+import SocialGithubIcon  from 'icons/social-github.vue'
+import IosEmailIcon  from 'icons/ios-email.vue'
+import SocialFacebookIcon  from 'icons/social-facebook.vue'
+import SocialTwitterIcon  from 'icons/social-twitter.vue'
+import SocialLinkedinIcon  from 'icons/social-linkedin.vue'
 
 export default {
   name: 'app',
+  components: {
+    SocialGithubIcon,
+    IosEmailIcon,
+    SocialFacebookIcon,
+    SocialTwitterIcon,
+    SocialLinkedinIcon
+  },
   data() {
-    return {}
+    return {
+      title: 'Vue2-Simplert-Plugin',
+      subtitle: 'Vue2-Simplert as Vue.js Plugins By Irfan Maulana',
+    }
   },
   methods: {
     open(title, message, type, color, customCloseBtnText, customCloseBtnClass, customClass, customIconUrl) {

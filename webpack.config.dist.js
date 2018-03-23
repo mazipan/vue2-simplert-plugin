@@ -50,6 +50,9 @@ module.exports = {
       "icons": path.resolve(__dirname, "node_modules/vue-ionicons/dist")
     }
   },
+  externals: {
+    'vue': 'vue'
+  },
   devtool: '#source-map',
   plugins: [
     new webpack.DefinePlugin({

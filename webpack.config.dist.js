@@ -51,7 +51,7 @@ module.exports = {
     }
   },
   externals: {
-    'vue': 'Vue'
+    'vue': 'vue'
   },
   devtool: '#source-map',
   plugins: [

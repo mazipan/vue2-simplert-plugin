@@ -1,7 +1,7 @@
 {
   "name": "vue2-simplert-plugin",
   "description": "Vue2-Simplert as Vue.js Plugins",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "license": "MIT",
   "author": "Irfan Maulana (https://github.com/mazipan/)",
   "private": false,
@@ -18,7 +18,10 @@
   "files": [
     "dist/vue2-simplert-plugin.js",
     "dist/vue2-simplert-plugin.js.gz",
-    "dist/vue2-simplert-plugin.js.map"
+    "dist/vue2-simplert-plugin.js.map",
+    "dist/vue2-simplert-plugin.css",
+    "dist/vue2-simplert-plugin.css.gz",
+    "dist/vue2-simplert-plugin.css.map"
   ],
   "repository": {
     "type": "git",

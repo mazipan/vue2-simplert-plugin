@@ -51,7 +51,7 @@ module.exports = {
     }
   },
   externals: {
-    'vue': 'vue'
+    'vue$': 'vue/dist/vue.esm.js'
   },
   devtool: '#source-map',
   plugins: [

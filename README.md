@@ -34,8 +34,11 @@ Usually `main.js` or `index.js`
 
 ```javascript
 import Simplert from 'vue2-simplert-plugin'
+require('vue2-simplert-plugin/dist/vue2-simplert-plugin.css')
+
 Vue.use(Simplert)
 ```
+> from v0.4.0 you need to add `vue2-simplert-plugin.css`
 
 Or, with customize default config which still can be overrided.
 ```javascript
@@ -89,6 +92,8 @@ If you already use [vue2-simplert](https://github.com/mazipan/vue2-simplert) in 
 + Import and use this plugin in your main app, ex : `main.js`
 ```javascript
 import Simplert from 'vue2-simplert-plugin'
+require('vue2-simplert-plugin/dist/vue2-simplert-plugin.css')
+
 Vue.use(Simplert)
 ```
 + Remove all import [vue2-simplert](https://github.com/mazipan/vue2-simplert) in your components and/or pages, because as Plugin you dont need to import in all components

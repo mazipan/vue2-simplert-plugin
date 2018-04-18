@@ -125,6 +125,15 @@ this.$Simplert.open(obj)
 ```
 + And **DONE** :+1: !!!
 
+## Documentation Vue2-Simplert
+
+- [Download](https://mazipan.gitbooks.io/vue2-simplert/download.html)
+- [Usage Guide](https://mazipan.gitbooks.io/vue2-simplert/usage.html)
+- [Methods And Props](https://mazipan.gitbooks.io/vue2-simplert/method-and-props.html)
+- [Example Code](https://mazipan.gitbooks.io/vue2-simplert/example.html)
+- [Articles](https://mazipan.gitbooks.io/vue2-simplert/articles.html)
+- [FAQ](https://mazipan.gitbooks.io/vue2-simplert/faq.html)
+
 ## Credit
 
 + Icon from [SweetAlert](https://github.com/t4t5/sweetalert)

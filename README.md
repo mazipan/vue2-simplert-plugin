@@ -146,4 +146,4 @@ If you'd like to contribute, head to the [contributing guidelines](CONTRIBUTING.
 
 ![vue2-simplert](https://mazipan.github.io/vue2-simplert/images/vue2-simplert-logo.png)
 
-Copyright © 2017 by [Irfan Maulana](https://github.com/mazipan/)
+Copyright © 2017 Built with ❤️ by Irfan Maulana

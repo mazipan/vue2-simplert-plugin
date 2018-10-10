@@ -1,6 +1,5 @@
 <template
-  src="vue2-simplert-core/simplert.html">
-</template>
+  src="vue2-simplert-core/simplert.html"/>
 
 <script>
 import simplertMixin from 'vue2-simplert-core'
@@ -13,8 +12,8 @@ export default {
   ],
   created () {
     // listen eventBus
-    SimplertEventBus.$on('open', this.openSimplert);
-    SimplertEventBus.$on('close', this.justCloseSimplert);
+    SimplertEventBus.$on('open', this.openSimplert)
+    SimplertEventBus.$on('close', this.justCloseSimplert)
   }
 }
 

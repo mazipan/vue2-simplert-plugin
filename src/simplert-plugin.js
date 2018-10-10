@@ -12,16 +12,16 @@ const Simplert = {
       },
       init(vm, opts) {
         this.$vm = vm
-        this.options = opts;
+        this.options = opts
       },
       open(obj) {
         if (!this.$vm) return
         obj.show = true
-        this.$vm.$emit('open', Object.assign({}, this.options, obj));
+        this.$vm.$emit('open', Object.assign({}, this.options, obj))
       },
       close() {
         if (!this.$vm) return
-        this.$vm.$emit('close');
+        this.$vm.$emit('close')
       }
     }
 

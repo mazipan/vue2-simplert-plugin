@@ -57,7 +57,7 @@ export default {
     },
 
     onOpen() {
-      alert("Hey, I am called when alert is opened")
+      alert('Hey, I am called when alert is opened')
     },
 
     onClose() {
@@ -172,7 +172,7 @@ export default {
         }
         setTimeout(()=> {
           this.$Simplert.open(obj)
-        }, 500);
+        }, 500)
       }
       let obj = {
         title: 'Open Another Simplert',

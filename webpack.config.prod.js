@@ -24,7 +24,7 @@ module.exports = merge(baseConfig, {
     minimize: true
   },
   externals: {
-    "vue": "Vue"
+    "vue": "vue"
   },
   plugins: [
     new MiniCssExtractPlugin({

@@ -19,10 +19,8 @@
   "files": [
     "dist/vue2-simplert-plugin.js",
     "dist/vue2-simplert-plugin.js.gz",
-    "dist/vue2-simplert-plugin.js.map",
     "dist/vue2-simplert-plugin.css",
-    "dist/vue2-simplert-plugin.css.gz",
-    "dist/vue2-simplert-plugin.css.map"
+    "dist/vue2-simplert-plugin.css.gz"
   ],
   "repository": {
     "type": "git",

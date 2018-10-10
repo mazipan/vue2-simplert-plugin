@@ -1,0 +1,137 @@
+
+.ion {
+  display: inline-flex;
+}
+.ion__svg {
+    fill: currentColor;
+}
+body {
+  background-color: #f2f4f6;
+}
+pre {
+  border: 0;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+code {
+  margin: 0;
+  padding: 0;
+}
+.btn-top {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.example__title {
+  font-size: 1.6rem;
+  color: #a6b6b9;
+}
+.content__row {
+  margin: 20px 0 !important;
+}
+.content {
+  margin: 20px 0;
+}
+.custom-class .simplert__content {
+  color: #fff !important;
+  background-color: purple !important;
+}
+.users {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.users li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.users li a {
+  display: block;
+  padding: 20px;
+  transition: all .3s ease;
+}
+.users li a:hover {
+  background-color: #d4dbe1;
+}
+.users li a img {
+  max-width: 100%;
+  height: 40px;
+}
+.add-button {
+  font-size: 3rem;
+}
+@media (max-width: 768px) {
+.header__title img {
+    width: 80%;
+}
+.fixed-top {
+    position: inherit;
+}
+.grid__col-3 {
+    padding: .5em 1em;
+    text-align: center;
+}
+}
+.custom-simplert {
+  color: #666;
+}
+.procced-btn {
+  outline: none;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  display: block !important;
+  width: 100% !important;
+  margin: 5px !important;
+  padding: 15px 20px !important;
+  background-color: #f7931e !important;
+  color: #fff;
+  border-radius: .25em;
+}
+.no-procced-btn {
+  outline: none;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  display: block !important;
+  width: 100% !important;
+  margin: 5px !important;
+  padding: 15px 20px !important;
+  color: #0096d9 !important;
+  border: 1px solid #0096d9 !important;
+  background-color: white !important;
+  border-radius: .25em;
+}
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+small {
+  display: block;
+  color: #ddd;
+  font-size: 16px;
+}
+.grid__row {
+  *zoom: 1;
+  margin: 0 auto;
+  max-width: 92.308em;
+}
+.grid__row:before, .grid__row:after {
+  display: table;
+  content: ' ';
+}
+.grid__row:after {
+  clear: both;
+}
+.centered {
+  text-align: center;
+}
+.ion:hover {
+  color: #4F8EF7;
+}
+

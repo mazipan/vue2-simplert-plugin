@@ -3,6 +3,7 @@ const path = require('path')
 const npm = require("./package.json")
 const CompressionPlugin = require("compression-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const merge = require('webpack-merge');
 const baseConfig = require('./webpack.config.base');
@@ -35,5 +36,6 @@ module.exports = merge(baseConfig, {
     new webpack.BannerPlugin({
       banner: `Vue2-Simplert v.${npm.version}`
     }),
+    // new BundleAnalyzerPlugin()
   ]
 });

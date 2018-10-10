@@ -1,0 +1,417 @@
+{
+  "errors": [],
+  "warnings": [
+    "asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).\nThis can impact web performance.\nAssets: \n  vendors~app.223ec0a886f1d75992d7.js (640 KiB)",
+    "entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.\nEntrypoints:\n  app (670 KiB)\n      vendors~app.223ec0a886f1d75992d7.css\n      vendors~app.223ec0a886f1d75992d7.js\n      app.223ec0a886f1d75992d7.css\n      app.223ec0a886f1d75992d7.js\n",
+    "webpack performance recommendations: \nYou can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.\nFor more info visit https://webpack.js.org/guides/code-splitting/"
+  ],
+  "version": "4.20.2",
+  "hash": "223ec0a886f1d75992d7",
+  "time": 3175,
+  "builtAt": 1539159377964,
+  "publicPath": "/vue2-simplert-plugin/",
+  "outputPath": "/Users/irfanmaulana/Documents/public/open-source/vue2-simplert-plugin/dist",
+  "assetsByChunkName": {
+    "app": [
+      "app.223ec0a886f1d75992d7.css",
+      "app.223ec0a886f1d75992d7.js"
+    ],
+    "vendors~app": [
+      "vendors~app.223ec0a886f1d75992d7.css",
+      "vendors~app.223ec0a886f1d75992d7.js"
+    ]
+  },
+  "assets": [
+    {
+      "name": "app.223ec0a886f1d75992d7.css",
+      "size": 2228,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "app"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "app.223ec0a886f1d75992d7.js",
+      "size": 24303,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "app"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "vendors~app.223ec0a886f1d75992d7.css",
+      "size": 3848,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "vendors~app"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "vendors~app.223ec0a886f1d75992d7.js",
+      "size": 655846,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "vendors~app"
+      ],
+      "emitted": true,
+      "isOverSizeLimit": true
+    },
+    {
+      "name": "index.html",
+      "size": 5078,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "app.223ec0a886f1d75992d7.css.gz",
+      "size": 806,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "vendors~app.223ec0a886f1d75992d7.css.gz",
+      "size": 1030,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "app.223ec0a886f1d75992d7.js.gz",
+      "size": 3790,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "index.html.gz",
+      "size": 1703,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "vendors~app.223ec0a886f1d75992d7.js.gz",
+      "size": 228062,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "app": {
+      "chunks": [
+        1,
+        0
+      ],
+      "assets": [
+        "vendors~app.223ec0a886f1d75992d7.css",
+        "vendors~app.223ec0a886f1d75992d7.js",
+        "app.223ec0a886f1d75992d7.css",
+        "app.223ec0a886f1d75992d7.js"
+      ],
+      "children": {},
+      "childAssets": {},
+      "isOverSizeLimit": true
+    }
+  },
+  "namedChunkGroups": {
+    "app": {
+      "chunks": [
+        1,
+        0
+      ],
+      "assets": [
+        "vendors~app.223ec0a886f1d75992d7.css",
+        "vendors~app.223ec0a886f1d75992d7.js",
+        "app.223ec0a886f1d75992d7.css",
+        "app.223ec0a886f1d75992d7.js"
+      ],
+      "children": {},
+      "childAssets": {},
+      "isOverSizeLimit": true
+    }
+  },
+  "chunks": [
+    {
+      "id": 0,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 31772,
+      "names": [
+        "app"
+      ],
+      "files": [
+        "app.223ec0a886f1d75992d7.css",
+        "app.223ec0a886f1d75992d7.js"
+      ],
+      "hash": "39b6d431c02d18916a0c",
+      "siblings": [
+        1
+      ],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "app",
+          "request": "./src/demo.js",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "rendered": true,
+      "initial": true,
+      "entry": false,
+      "reason": "split chunk (cache group: vendors) (name: vendors~app)",
+      "size": 1103089,
+      "names": [
+        "vendors~app"
+      ],
+      "files": [
+        "vendors~app.223ec0a886f1d75992d7.css",
+        "vendors~app.223ec0a886f1d75992d7.js"
+      ],
+      "hash": "397a6d1d08231dd5e530",
+      "siblings": [
+        0
+      ],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "app",
+          "request": "./src/demo.js",
+          "reasons": []
+        }
+      ]
+    }
+  ],
+  "children": [
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "/vue2-simplert-plugin/",
+      "outputPath": "/Users/irfanmaulana/Documents/public/open-source/vue2-simplert-plugin/dist",
+      "assetsByChunkName": {},
+      "assets": [
+        {
+          "name": "index.html",
+          "size": 550238,
+          "chunks": [
+            0
+          ],
+          "chunkNames": []
+        }
+      ],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "undefined": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "index.html"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "undefined": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "index.html"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "chunks": [
+        {
+          "id": 0,
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "size": 546245,
+          "names": [],
+          "files": [
+            "index.html"
+          ],
+          "hash": "085a118f8368570ce3d1",
+          "siblings": [],
+          "parents": [],
+          "children": [],
+          "childrenByOrder": {},
+          "origins": [
+            {
+              "module": "",
+              "moduleIdentifier": "",
+              "moduleName": "",
+              "loc": "",
+              "request": "/Users/irfanmaulana/Documents/public/open-source/vue2-simplert-plugin/node_modules/html-webpack-plugin/lib/loader.js!/Users/irfanmaulana/Documents/public/open-source/vue2-simplert-plugin/src/index.ejs",
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "children": [],
+      "name": "html-webpack-plugin for \"index.html\""
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "/vue2-simplert-plugin/",
+      "outputPath": "/Users/irfanmaulana/Documents/public/open-source/vue2-simplert-plugin/dist",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "chunks": [
+        {
+          "id": 0,
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "size": 4782,
+          "names": [
+            "mini-css-extract-plugin"
+          ],
+          "files": [
+            "*"
+          ],
+          "hash": "0c371ab6a0fd7d1f94bc",
+          "siblings": [],
+          "parents": [],
+          "children": [],
+          "childrenByOrder": {},
+          "origins": [
+            {
+              "module": "",
+              "moduleIdentifier": "",
+              "moduleName": "",
+              "loc": "mini-css-extract-plugin",
+              "request": "!!/Users/irfanmaulana/Documents/public/open-source/vue2-simplert-plugin/node_modules/css-loader/index.js!/Users/irfanmaulana/Documents/public/open-source/vue2-simplert-plugin/node_modules/vue-loader/lib/loaders/stylePostLoader.js!/Users/irfanmaulana/Documents/public/open-source/vue2-simplert-plugin/node_modules/sass-loader/lib/loader.js!/Users/irfanmaulana/Documents/public/open-source/vue2-simplert-plugin/node_modules/vue-loader/lib/index.js??vue-loader-options!/Users/irfanmaulana/Documents/public/open-source/vue2-simplert-plugin/src/App.vue?vue&type=style&index=0&lang=scss&",
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/index.js!node_modules/vue-loader/lib/loaders/stylePostLoader.js!node_modules/sass-loader/lib/loader.js!node_modules/vue-loader/lib/index.js??vue-loader-options!src/App.vue?vue&type=style&index=0&lang=scss&"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "/vue2-simplert-plugin/",
+      "outputPath": "/Users/irfanmaulana/Documents/public/open-source/vue2-simplert-plugin/dist",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "chunks": [
+        {
+          "id": 0,
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "size": 6458,
+          "names": [
+            "mini-css-extract-plugin"
+          ],
+          "files": [
+            "*"
+          ],
+          "hash": "b83e37a9debde009865a",
+          "siblings": [],
+          "parents": [],
+          "children": [],
+          "childrenByOrder": {},
+          "origins": [
+            {
+              "module": "",
+              "moduleIdentifier": "",
+              "moduleName": "",
+              "loc": "mini-css-extract-plugin",
+              "request": "!!/Users/irfanmaulana/Documents/public/open-source/vue2-simplert-plugin/node_modules/css-loader/index.js!/Users/irfanmaulana/Documents/public/open-source/vue2-simplert-plugin/node_modules/vue-loader/lib/loaders/stylePostLoader.js!/Users/irfanmaulana/Documents/public/open-source/vue2-simplert-plugin/node_modules/vue2-simplert-core/simplert.css?vue&type=style&index=0&lang=css&",
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/index.js!node_modules/vue-loader/lib/loaders/stylePostLoader.js!node_modules/vue2-simplert-core/simplert.css?vue&type=style&index=0&lang=css&"
+    }
+  ]
+}

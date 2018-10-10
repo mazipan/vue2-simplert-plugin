@@ -17,7 +17,7 @@ module.exports = merge(baseConfig, {
     publicPath: '/dist',
     filename: 'vue2-simplert-plugin.js',
     library: 'Simplert',
-    libraryTarget: 'commonjs'
+    libraryTarget: 'commonjs',
   },
   mode: 'production',
   optimization: {

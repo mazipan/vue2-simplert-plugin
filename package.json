@@ -1,7 +1,7 @@
 {
   "name": "vue2-simplert-plugin",
   "description": "Vue2-Simplert as Vue.js Plugins",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "license": "MIT",
   "author": "Irfan Maulana (https://github.com/mazipan/)",
   "private": false,
@@ -38,8 +38,10 @@
     "vue popup"
   ],
   "dependencies": {
-    "vue": "^2.5.17",
     "vue2-simplert-core": "1.0.3"
+  },
+  "peerDependencies": {
+    "vue": "^2.5.17"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

@@ -1,10 +1,10 @@
 import SimplertComponent from './Simplert.vue'
-import { SimplertEventBus } from './simplert-event-bus.js'
+import { SimplertEventBus } from './event-bus.js'
 
-const Simplert = {
+export const Simplert = {
   install (Vue = {}, options = {}) {
 
-    let SimplertPlugin = {
+    const SimplertPlugin = {
       $vm: null,
       state: {},
       data: {
@@ -31,5 +31,3 @@ const Simplert = {
     Vue.prototype.$Simplert = SimplertPlugin
   }
 }
-
-export default Simplert

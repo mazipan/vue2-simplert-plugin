@@ -1,0 +1,6 @@
+export const CONSTANT = {
+  DEFAULT_TYPE: 'info',
+  DEFAULT_BTN_CLOSE_TEXT: 'Close',
+  DEFAULT_BTN_CONFIRM_TEXT: 'Confirm',
+  INVALID_TYPE: 'INVALID_TYPE'
+}

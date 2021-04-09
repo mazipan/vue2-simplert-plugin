@@ -1,26 +1,20 @@
 module.exports = {
-  "env": {
-      "browser": true,
-      "commonjs": true,
-      "es6": true,
-      "jest": true
+  root: true,
+  env: {
+    node: true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:vue/recommended"
+  extends: [
+    'plugin:vue/essential',
+    '@vue/standard',
+    '@vue/typescript',
+    'prettier'
   ],
-  "parserOptions": {
-      "ecmaVersion": 2018,
-      "sourceType": "module"
+  rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-tabs': 'off'
   },
-  "rules": {
-      "indent": [ "error", 2 ],
-      "linebreak-style": [ "error", "unix" ],
-      "quotes": [ "error", "single" ],
-      "semi": [ "error", "never" ],
-      "no-console": "off"
-  },
-  "overrides": {
-      "files": [ "**/*.js", "**/*.vue" ]
+  parserOptions: {
+    parser: '@typescript-eslint/parser'
   }
-};
+}

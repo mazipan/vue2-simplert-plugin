@@ -1,27 +1,46 @@
-import SocialGithubIcon  from 'icons/social-github.vue'
-import IosEmailIcon  from 'icons/ios-email.vue'
-import SocialFacebookIcon  from 'icons/social-facebook.vue'
-import SocialTwitterIcon  from 'icons/social-twitter.vue'
-import SocialLinkedinIcon  from 'icons/social-linkedin.vue'
+<template>
+  <div class="home">
+    <section class="container hero">
+      <HeaderComponent />
+    </section>
+
+    <section class="container">
+      <c-heading as="h3">Basic Type Variants</c-heading>
+      <BasicType @open="open" />
+    </section>
+
+    <section class="container">
+      <c-heading as="h3">More Examples</c-heading>
+      <AdvanceExamples @open="open" />
+    </section>
+
+    <FooterComponent />
+  </div>
+</template>
+
+<script lang="js">
+import {  CHeading } from '@chakra-ui/vue'
+import HeaderComponent from '../components/Header'
+import FooterComponent from '../components/Footer'
+import BasicType from '../components/BasicType'
+import AdvanceExamples from '../components/AdvanceExamples'
 
 export default {
-  name: 'app',
+  name: 'Home',
   components: {
-    SocialGithubIcon,
-    IosEmailIcon,
-    SocialFacebookIcon,
-    SocialTwitterIcon,
-    SocialLinkedinIcon
+    HeaderComponent,
+    FooterComponent,
+    BasicType,
+    AdvanceExamples,
+    CHeading,
   },
-  data() {
+  data () {
     return {
-      title: 'Vue2-Simplert-Plugin',
-      subtitle: 'Vue2-Simplert as Vue.js Plugins By Irfan Maulana',
     }
   },
   methods: {
     open(title, message, type, color, customCloseBtnText, customCloseBtnClass, customClass, customIconUrl) {
-      let obj = {
+      const obj = {
         title: title,
         message: message,
         type: type
@@ -47,7 +66,7 @@ export default {
     },
 
     openCustomHtml() {
-      let obj = {
+      const obj = {
         title: 'Custom HTML',
         message: '<span style="color:red;">I am HTML</span>',
         type: 'info'
@@ -69,7 +88,7 @@ export default {
     },
 
     openCustomFunction() {
-      let obj = {
+      const obj = {
         title: 'Custom Function',
         message: 'Click close to trigger custom function',
         type: 'info',
@@ -80,7 +99,7 @@ export default {
     },
 
     openWithOnOpen() {
-      let obj = {
+      const obj = {
         title: 'On Open Function',
         message: 'There should be an alert before you see this',
         type: 'info',
@@ -91,7 +110,7 @@ export default {
     },
 
     openWithConfirm(title, message, isCustomFunction, customConfirmBtnText, customConfirmBtnClass) {
-      let obj = {
+      const obj = {
         title: title,
         message: message,
         type: 'info',
@@ -114,7 +133,7 @@ export default {
     },
 
     openDisabledOverlayClick() {
-      let obj = {
+      const obj = {
         title: 'Disable Overlay Click',
         message: 'Now You can not close me by clicking overlay',
         type: 'info',
@@ -125,7 +144,7 @@ export default {
     },
 
     openWithHiddenButton() {
-      let obj = {
+      const obj = {
         title: 'Hey, I am Title',
         message: 'I am Message',
         type: 'info',
@@ -136,7 +155,7 @@ export default {
     },
 
     openWithXbtn() {
-      let obj = {
+      const obj = {
         title: 'Hey, I am Title',
         message: 'I am Message',
         type: 'info',
@@ -147,7 +166,7 @@ export default {
     },
 
     openWithStyle() {
-      let obj = {
+      const obj = {
         title: 'Confirmation',
         message: 'Do you want to procced ?',
         customClass: 'custom-simplert',
@@ -165,8 +184,8 @@ export default {
     },
 
     callAnotherSimplert() {
-      let confirm = () => {
-        let obj = {
+      const confirm = () => {
+        const obj = {
           title: 'Hey, I am Triggered',
           message: 'You have success open new simplert'
         }
@@ -174,7 +193,7 @@ export default {
           this.$Simplert.open(obj)
         }, 500)
       }
-      let obj = {
+      const obj = {
         title: 'Open Another Simplert',
         message: 'Click confirm to show another simplert',
         useConfirmBtn: true,
@@ -185,3 +204,22 @@ export default {
     }
   }
 }
+</script>
+
+<style lang="scss">
+pre:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+.container {
+  margin-top: 2em;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @media (min-width: 760px) {
+    padding-left: 14rem;
+    padding-right: 14rem;
+  }
+}
+</style>

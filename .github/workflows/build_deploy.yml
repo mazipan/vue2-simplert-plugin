@@ -2,7 +2,7 @@ name: "Build and Deploy"
 
 on:
   push:
-    branches: [move-to-pnpm]
+    branches: [master]
 
 jobs:
   build_and_deploy:

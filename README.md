@@ -2,9 +2,7 @@
 
 > Vue 2 Simple Alert Plugin (SweetAlert Inspired)
 
-[![License](https://img.shields.io/github/license/mazipan/vue2-simplert-plugin.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert-plugin) ![minified](https://badgen.net/bundlephobia/minzip/vue2-simplert-plugin) [![version](https://img.shields.io/npm/v/vue2-simplert-plugin.svg)](https://www.npmjs.com/package/vue2-simplert-plugin) [![downloads](https://img.shields.io/npm/dt/vue2-simplert-plugin.svg)](https://www.npmjs.com/package/vue2-simplert-plugin)
-
-https://codesandbox.io/s/vue-simplert-plugin-demo-elkoc?file=/package.json
+[![License](https://img.shields.io/github/license/mazipan/vue2-simplert-plugin.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert-plugin) ![minified](https://badgen.net/bundlephobia/minzip/vue2-simplert-plugin) [![version](https://img.shields.io/npm/v/vue2-simplert-plugin.svg)](https://www.npmjs.com/package/vue2-simplert-plugin) [![downloads](https://img.shields.io/npm/dt/vue2-simplert-plugin.svg)](https://www.npmjs.com/package/vue2-simplert-plugin) [![Build and Deploy](https://github.com/mazipan/vue2-simplert-plugin/actions/workflows/build_deploy.yml/badge.svg)](https://github.com/mazipan/vue2-simplert-plugin/actions/workflows/build_deploy.yml)
 
 ## Why we need ?
 
@@ -12,7 +10,9 @@ When we using [vue2-simplert](https://github.com/mazipan/vue2-simplert), we will
 
 ## Demo
 
-[https://mazipan.github.io/vue2-simplert-plugin/](https://mazipan.github.io/vue2-simplert-plugin/)
+- [Full Demo](https://mazipan.github.io/vue2-simplert-plugin/)
+
+- [Codesandbox Test](https://codesandbox.io/s/vue-simplert-plugin-demo-elkoc)
 
 ## Install
 
@@ -35,16 +35,17 @@ npm i vue2-simplert-plugin --save
 Usually `main.js` or `index.js`
 
 ```javascript
-import Simplert from 'vue2-simplert-plugin'
-require('vue2-simplert-plugin/dist/vue2-simplert-plugin.css')
+import { Simplert } from 'vue2-simplert-plugin'
+import 'vue2-simplert-plugin/dist/vue2-simplert-plugin.min.css'
 
 Vue.use(Simplert)
 ```
-> from v0.4.0 you need to add `vue2-simplert-plugin.css`
 
 Or, with customize default config which still can be overrided.
 ```javascript
-import Simplert from 'vue2-simplert-plugin'
+import { Simplert } from 'vue2-simplert-plugin'
+import 'vue2-simplert-plugin/dist/vue2-simplert-plugin.min.css'
+
 Vue.use(Simplert, {
   title: 'test', //string -- title alert
   message: 'message', //string -- message alert
@@ -71,7 +72,7 @@ for more [Methods and Props](https://mazipan.gitbooks.io/vue2-simplert/method-an
 Usually `App.vue`
 
 ```html
-<simplert></simplert>
+<simplert />
 ```
 
 #### Open/Close Popup
@@ -92,39 +93,51 @@ this.$Simplert.close()
 If you already use [vue2-simplert](https://github.com/mazipan/vue2-simplert) in your project, please follow this below guide :
 + Make sure you add dependency `npm i vue2-simplert-plugin --save`
 + Import and use this plugin in your main app, ex : `main.js`
+
 ```javascript
-import Simplert from 'vue2-simplert-plugin'
-require('vue2-simplert-plugin/dist/vue2-simplert-plugin.css')
+import { Simplert } from 'vue2-simplert-plugin'
+import 'vue2-simplert-plugin/dist/vue2-simplert-plugin.min.css'
 
 Vue.use(Simplert)
 ```
+
 + Remove all import [vue2-simplert](https://github.com/mazipan/vue2-simplert) in your components and/or pages, because as Plugin you dont need to import in all components
+
 ```javascript
 import Simplert from 'vue2-simplert'
 ```
+
 + Remove all adding component [vue2-simplert](https://github.com/mazipan/vue2-simplert) in your components and/or pages, because you dont need set components again
+
 ```javascript
 components: {Simplert}
 ```
+
 + Remove all template html snippet in each components
+
 ```html
 <simplert :useRadius="true"
           :useIcon="true"
           ref="simplert">
 </simplert>
 ```
+
 + Add new html snippet in root application, ex : `App.vue`
+
 ```html
 <simplert>
 </simplert>
 ```
+
 + Change all call method open with new plugin method, you dont need to change all configuration
+
 ```javascript
 // change this call
 this.$refs.simplert.openSimplert(obj)
 // to this way
 this.$Simplert.open(obj)
 ```
+
 + And **DONE** :+1: !!!
 
 ## Documentation Vue2-Simplert
@@ -146,4 +159,4 @@ If you'd like to contribute, head to the [contributing guidelines](CONTRIBUTING.
 
 ![vue2-simplert](https://mazipan.github.io/vue2-simplert/images/vue2-simplert-logo.png)
 
-Copyright © 2017 Built with ❤️ by Irfan Maulana
+Copyright © 2017-present, built with ❤️ by Irfan Maulana

@@ -5,10 +5,10 @@ on:
     branches: [move-to-pnpm]
 
 jobs:
-  runs-on: ubuntu-latest
+  build_and_deploy:
+    runs-on: ubuntu-latest
 
-  steps:
-    build:
+    steps:
       - uses: actions/checkout@v2
 
       - name: Cache pnpm modules

@@ -1,0 +1,42 @@
+name: "Build and Deploy"
+
+on:
+  push:
+    branches: [move-to-pnpm]
+
+jobs:
+  runs-on: ubuntu-latest
+
+  steps:
+    build:
+      - uses: actions/checkout@v2
+
+      - name: Cache pnpm modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-pnpm-modules
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-
+
+      - name: pnpm install recursive
+        uses: pnpm/action-setup@v1.2.1
+        with:
+          version: 5.17.2
+          run_install: |
+            - recursive: true
+
+      - name: Build library
+        run: pnpm run build:lib
+
+      - name: Build demo app
+        run: pnpm run build:demo
+
+      - name: GitHub Pages Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: ./packages/demo/dist/
+          publish_branch: gh-pages

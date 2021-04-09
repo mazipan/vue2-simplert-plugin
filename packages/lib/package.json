@@ -1,0 +1,41 @@
+{
+  "name": "vue2-simplert-plugin",
+  "description": "Vue2-Simplert as Vue.js Plugins",
+  "version": "0.6.0-alpha.3",
+  "license": "MIT",
+  "author": "Irfan Maulana (https://github.com/mazipan/)",
+  "homepage": "https://github.com/mazipan/vue2-simplert-plugin/",
+	"main": "dist/vue2-simplert-plugin.min.js",
+	"module": "dist/vue2-simplert-plugin.esm.min.js",
+	"unpkg": "dist/vue2-simplert-plugin.min.js",
+  "scripts": {
+    "build": "rm -rf dist && bili --format esm-min --format cjs-min"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "bili": "^5.0.5",
+    "rollup-plugin-vue": "^5.1.9",
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mazipan/vue2-simplert-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mazipan/vue2-simplert-plugin/issues"
+  },
+  "keywords": [
+    "vue2 alert",
+    "vue2 sweet alert",
+    "vue2 popup",
+    "vue alert",
+    "vue sweet alert",
+    "vue popup"
+  ]
+}

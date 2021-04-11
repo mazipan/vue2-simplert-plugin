@@ -1,6 +1,6 @@
 <template>
-  <c-stack :spacing="5" :mt="5" is-inline justify="space-between">
-    <c-box width="25%" :p="5" rounded="lg" shadow="md" border-width="1px" v-for="typeV in typeVariants" :key="typeV.type">
+  <c-stack :spacing="5" :mt="5" justify="space-between">
+    <c-box width="100%" :p="5" rounded="lg" shadow="md" border-width="1px" v-for="typeV in typeVariants" :key="typeV.type">
       <c-text font-size="xl" :mb="2">Type: {{ typeV.type }}</c-text>
 
       <c-button

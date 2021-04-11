@@ -1,8 +1,8 @@
 {
-  "name": "demo",
-  "version": "0.6.0-beta.1",
-  "description": "Vue2-Simplert as Vue.js Plugins",
-  "author": "Irfan Maulana (https://github.com/mazipan/)",
+	"name": "demo",
+	"version": "0.6.0-beta.1",
+	"description": "Vue2-Simplert as Vue.js Plugins",
+	"author": "Irfan Maulana (https://github.com/mazipan/)",
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
@@ -11,7 +11,9 @@
 	},
 	"dependencies": {
 		"@chakra-ui/vue": "^0.6.5",
-		"emotion": "^10.0.27"
+		"@fortawesome/free-solid-svg-icons": "^5.15.3",
+		"emotion": "^10.0.27",
+		"vue-code-highlight": "^0.7.6"
 	},
 	"devDependencies": {
 		"@types/node": "14.11.2",
@@ -32,12 +34,12 @@
 		"vue": "2.6.12",
 		"vue-class-component": "7.2.6",
 		"vue-cli-plugin-chakra-ui": "^1.0.3",
-		"vue2-simplert-plugin": "file:../lib",
 		"vue-prism-component": "1.2.0",
 		"vue-property-decorator": "9.0.0",
 		"vue-router": "3.4.3",
 		"vue-script2": "2.1.0",
 		"vue-template-compiler": "2.6.12",
+		"vue2-simplert-plugin": "file:../lib",
 		"vuex": "3.5.1"
 	},
 	"license": "MIT"

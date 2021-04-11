@@ -17,3 +17,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.pacifico {
+  font-family: "Pacifico", cursive;
+}
+</style>

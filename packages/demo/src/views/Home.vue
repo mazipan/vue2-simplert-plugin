@@ -5,12 +5,16 @@
     </section>
 
     <section class="container">
-      <c-heading as="h3">Basic Type Variants</c-heading>
+      <Install />
+    </section>
+
+    <section class="container">
+      <c-heading as="h3" color="orange.500" class="pacifico" id="basic-examples">Basic Examples</c-heading>
       <BasicType @open="open" />
     </section>
 
     <section class="container">
-      <c-heading as="h3">More Examples</c-heading>
+      <c-heading as="h3" color="orange.500" class="pacifico" id="more-examples">More Examples</c-heading>
       <AdvanceExamples @open="open" />
     </section>
 
@@ -22,6 +26,7 @@
 import {  CHeading } from '@chakra-ui/vue'
 import HeaderComponent from '../components/Header'
 import FooterComponent from '../components/Footer'
+import Install from '../components/Install'
 import BasicType from '../components/BasicType'
 import AdvanceExamples from '../components/AdvanceExamples'
 
@@ -30,6 +35,7 @@ export default {
   components: {
     HeaderComponent,
     FooterComponent,
+    Install,
     BasicType,
     AdvanceExamples,
     CHeading,

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <c-stack :spacing="5" :mt="5" is-inline>
+    <c-stack :spacing="5" :mt="5">
       <c-box
-        width="25%"
+        width="100%"
         :p="5"
         rounded="lg"
         shadow="md"
@@ -18,9 +18,9 @@
       </c-box>
     </c-stack>
 
-    <c-stack :spacing="5" :mt="5" is-inline>
+    <c-stack :spacing="5" :mt="5">
       <c-box
-        width="25%"
+        width="100%"
         :p="5"
         rounded="lg"
         shadow="md"
@@ -36,9 +36,9 @@
       </c-box>
     </c-stack>
 
-    <c-stack :spacing="5" :mt="5" is-inline>
+    <c-stack :spacing="5" :mt="5">
       <c-box
-        width="25%"
+        width="100%"
         :p="5"
         rounded="lg"
         shadow="md"
@@ -54,9 +54,9 @@
       </c-box>
     </c-stack>
 
-    <c-stack :spacing="5" :mt="5" is-inline>
+    <c-stack :spacing="5" :mt="5">
       <c-box
-        width="25%"
+        width="100%"
         :p="5"
         rounded="lg"
         shadow="md"
